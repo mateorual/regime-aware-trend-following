@@ -1,0 +1,80 @@
+# Diversified multi-asset trend following on 18 liquid ETFs.
+# Assets enter the portfolio once they have 3 years of history (unbalanced panel);
+# evaluation starts mid-2005 (4 ETFs live, 18 by 2010), so the GFC is out-of-sample.
+
+name: multi_asset
+title: Multi-asset ETF trend following
+description: >
+  Eighteen ETFs across equities, rates, credit, commodities and currencies -
+  the classic managed-futures playing field, implemented with ETFs.
+
+universe:
+  SPY: {name: US large caps,           group: Equities}
+  QQQ: {name: Nasdaq 100,              group: Equities}
+  IWM: {name: US small caps,           group: Equities}
+  EFA: {name: Developed ex-US,         group: Equities}
+  EEM: {name: Emerging markets,        group: Equities}
+  VNQ: {name: US REITs,                group: Equities}
+  TLT: {name: 20y+ Treasuries,         group: Rates & credit}
+  IEF: {name: 7-10y Treasuries,        group: Rates & credit}
+  TIP: {name: TIPS,                    group: Rates & credit}
+  LQD: {name: IG credit,               group: Rates & credit}
+  HYG: {name: High-yield credit,       group: Rates & credit}
+  GLD: {name: Gold,                    group: Commodities}
+  SLV: {name: Silver,                  group: Commodities}
+  DBC: {name: Broad commodities,       group: Commodities}
+  USO: {name: Crude oil,               group: Commodities}
+  UUP: {name: US dollar index,         group: Currencies}
+  FXE: {name: Euro,                    group: Currencies}
+  FXY: {name: Japanese yen,            group: Currencies}
+
+data:
+  start: "1993-01-01"
+  end: "2026-11-01"
+  risk_free: {ticker: "^IRX"}
+
+signals:
+  tsmom_lookback: 252            # 12-month time-series momentum
+  donchian_entry: 55             # turtle entry channel
+  donchian_exit: 20              # turtle exit channel
+  kalman_trend_period: 126       # HP-equivalent cut-off: ~6-month trends
+  kalman_full_position_sharpe: 0.5
+
+regime:
+  hmm:
+    n_states: 2                  # calm / turbulent
+    features: [return]           # daily log return (Hamilton-style switching variance)
+    train_days: 2520             # 10y rolling window
+    min_train_days: 756          # first fit after 3y
+    refit_every: 21              # monthly re-estimation
+    n_iter: 200
+    n_init: 5
+    seed: 7
+  vol_control:
+    window: 21
+    median_window: 756
+
+portfolio:
+  asset_vol_halflife: 30
+  portfolio_vol_target: 0.10     # ex-ante, set by the ungated base book
+  portfolio_vol_halflife: 60
+  max_gross_leverage: 4.0
+  transaction_cost_bps: 5        # liquid ETFs: half-spread + slippage
+  rebalance_buffer: 0.25         # trade only when a position is >25% off target
+  min_history_days: 756
+
+evaluation:
+  start: "2005-07-01"
+  cost_sensitivity_bps: [0, 2, 5, 10, 20]
+  bootstrap_samples: 2000
+  bootstrap_block: 21
+  seed: 7
+  anatomy_asset: SPY
+  anatomy_window: ["2019-06-01", "2021-06-30"]
+  crises:
+    Global financial crisis: ["2007-10-09", "2009-03-09"]
+    Euro debt crisis:        ["2011-07-22", "2011-10-03"]
+    China / oil slump:       ["2015-08-10", "2016-02-11"]
+    Q4 2018 sell-off:        ["2018-09-20", "2018-12-24"]
+    COVID crash:             ["2020-02-19", "2020-03-23"]
+    2022 inflation shock:    ["2022-01-03", "2022-10-12"]

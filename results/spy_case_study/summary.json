@@ -1,0 +1,263 @@
+{
+  "config": "spy_case_study",
+  "evaluation_period": [
+    "1996-03-01",
+    "2026-10-30"
+  ],
+  "live_assets": [
+    1,
+    1
+  ],
+  "transaction_cost_bps": 2,
+  "performance": {
+    "benchmark": {
+      "CAGR": 0.071241,
+      "Volatility": 0.1046,
+      "Sharpe": 0.495117,
+      "Sortino": 0.682753,
+      "Max drawdown": -0.275535,
+      "Calmar": 0.258556,
+      "Skew (monthly)": -0.530239,
+      "Avg gross leverage": 0.634309,
+      "Time invested": 1.0,
+      "Turnover (1-way, p.a.)": 0.125562
+    },
+    "tsmom_base": {
+      "CAGR": 0.066657,
+      "Volatility": 0.102357,
+      "Sharpe": 0.461832,
+      "Sortino": 0.630365,
+      "Max drawdown": -0.256361,
+      "Calmar": 0.26001,
+      "Skew (monthly)": -0.647063,
+      "Avg gross leverage": 0.624042,
+      "Time invested": 1.0,
+      "Turnover (1-way, p.a.)": 1.626349
+    },
+    "tsmom_hmm": {
+      "CAGR": 0.044121,
+      "Volatility": 0.073596,
+      "Sharpe": 0.317592,
+      "Sortino": 0.430739,
+      "Max drawdown": -0.193145,
+      "Calmar": 0.228433,
+      "Skew (monthly)": -0.341672,
+      "Avg gross leverage": 0.455099,
+      "Time invested": 0.971751,
+      "Turnover (1-way, p.a.)": 5.120626
+    },
+    "tsmom_vol": {
+      "CAGR": 0.036126,
+      "Volatility": 0.071712,
+      "Sharpe": 0.216826,
+      "Sortino": 0.294975,
+      "Max drawdown": -0.241393,
+      "Calmar": 0.149657,
+      "Skew (monthly)": 0.296066,
+      "Avg gross leverage": 0.384559,
+      "Time invested": 0.597123,
+      "Turnover (1-way, p.a.)": 3.338425
+    },
+    "tsmom_lookahead": {
+      "CAGR": 0.090911,
+      "Volatility": 0.074889,
+      "Sharpe": 0.898894,
+      "Sortino": 1.270862,
+      "Max drawdown": -0.101759,
+      "Calmar": 0.893392,
+      "Skew (monthly)": 0.068071,
+      "Avg gross leverage": 0.483251,
+      "Time invested": 0.952961,
+      "Turnover (1-way, p.a.)": 1.918564
+    },
+    "donchian_base": {
+      "CAGR": 0.005523,
+      "Volatility": 0.084998,
+      "Sharpe": -0.157603,
+      "Sortino": -0.213639,
+      "Max drawdown": -0.280831,
+      "Calmar": 0.019665,
+      "Skew (monthly)": 0.067003,
+      "Avg gross leverage": 0.430007,
+      "Time invested": 0.673967,
+      "Turnover (1-way, p.a.)": 2.666998
+    },
+    "donchian_hmm": {
+      "CAGR": 0.014467,
+      "Volatility": 0.070045,
+      "Sharpe": -0.08137,
+      "Sortino": -0.109867,
+      "Max drawdown": -0.177449,
+      "Calmar": 0.081526,
+      "Skew (monthly)": 0.433058,
+      "Avg gross leverage": 0.332977,
+      "Time invested": 0.666839,
+      "Turnover (1-way, p.a.)": 4.124063
+    },
+    "donchian_vol": {
+      "CAGR": 0.009287,
+      "Volatility": 0.075143,
+      "Sharpe": -0.139082,
+      "Sortino": -0.190064,
+      "Max drawdown": -0.269359,
+      "Calmar": 0.034477,
+      "Skew (monthly)": 0.39799,
+      "Avg gross leverage": 0.337877,
+      "Time invested": 0.506674,
+      "Turnover (1-way, p.a.)": 3.28829
+    },
+    "donchian_lookahead": {
+      "CAGR": 0.040058,
+      "Volatility": 0.073167,
+      "Sharpe": 0.265633,
+      "Sortino": 0.375474,
+      "Max drawdown": -0.114873,
+      "Calmar": 0.348717,
+      "Skew (monthly)": 0.600995,
+      "Avg gross leverage": 0.353505,
+      "Time invested": 0.654529,
+      "Turnover (1-way, p.a.)": 2.468709
+    },
+    "kalman_base": {
+      "CAGR": 0.033158,
+      "Volatility": 0.102399,
+      "Sharpe": 0.149903,
+      "Sortino": 0.207751,
+      "Max drawdown": -0.198314,
+      "Calmar": 0.167198,
+      "Skew (monthly)": -0.146688,
+      "Avg gross leverage": 0.620717,
+      "Time invested": 1.0,
+      "Turnover (1-way, p.a.)": 2.187564
+    },
+    "kalman_hmm": {
+      "CAGR": 0.030495,
+      "Volatility": 0.079492,
+      "Sharpe": 0.134414,
+      "Sortino": 0.184782,
+      "Max drawdown": -0.131757,
+      "Calmar": 0.231451,
+      "Skew (monthly)": 0.188227,
+      "Avg gross leverage": 0.45008,
+      "Time invested": 0.981988,
+      "Turnover (1-way, p.a.)": 5.293718
+    },
+    "kalman_vol": {
+      "CAGR": 0.01987,
+      "Volatility": 0.084258,
+      "Sharpe": 0.00839,
+      "Sortino": 0.011669,
+      "Max drawdown": -0.220626,
+      "Calmar": 0.090062,
+      "Skew (monthly)": 0.265008,
+      "Avg gross leverage": 0.436853,
+      "Time invested": 0.679668,
+      "Turnover (1-way, p.a.)": 3.610998
+    },
+    "kalman_lookahead": {
+      "CAGR": 0.079445,
+      "Volatility": 0.082824,
+      "Sharpe": 0.692639,
+      "Sortino": 1.003686,
+      "Max drawdown": -0.113688,
+      "Calmar": 0.6988,
+      "Skew (monthly)": 0.274566,
+      "Avg gross leverage": 0.480299,
+      "Time invested": 0.957367,
+      "Turnover (1-way, p.a.)": 2.19616
+    }
+  },
+  "paired_tests": {
+    "tsmom_hmm vs tsmom_base": {
+      "dSharpe": -0.14424,
+      "CI low": -0.309487,
+      "CI high": 0.025922,
+      "p (dSharpe <= 0)": 0.949
+    },
+    "tsmom_vol vs tsmom_base": {
+      "dSharpe": -0.245006,
+      "CI low": -0.488695,
+      "CI high": 0.002726,
+      "p (dSharpe <= 0)": 0.973
+    },
+    "tsmom_lookahead vs tsmom_base": {
+      "dSharpe": 0.437062,
+      "CI low": 0.25224,
+      "CI high": 0.630427,
+      "p (dSharpe <= 0)": 0.0
+    },
+    "tsmom_hmm vs tsmom_vol": {
+      "dSharpe": 0.100767,
+      "CI low": -0.082908,
+      "CI high": 0.276791,
+      "p (dSharpe <= 0)": 0.141
+    },
+    "tsmom_base vs benchmark": {
+      "dSharpe": -0.033285,
+      "CI low": -0.333494,
+      "CI high": 0.276411,
+      "p (dSharpe <= 0)": 0.5895
+    },
+    "donchian_hmm vs donchian_base": {
+      "dSharpe": 0.076233,
+      "CI low": -0.053501,
+      "CI high": 0.206691,
+      "p (dSharpe <= 0)": 0.138
+    },
+    "donchian_vol vs donchian_base": {
+      "dSharpe": 0.01852,
+      "CI low": -0.148879,
+      "CI high": 0.184432,
+      "p (dSharpe <= 0)": 0.414
+    },
+    "donchian_lookahead vs donchian_base": {
+      "dSharpe": 0.423236,
+      "CI low": 0.291563,
+      "CI high": 0.554964,
+      "p (dSharpe <= 0)": 0.0
+    },
+    "donchian_hmm vs donchian_vol": {
+      "dSharpe": 0.057712,
+      "CI low": -0.093329,
+      "CI high": 0.20528,
+      "p (dSharpe <= 0)": 0.2325
+    },
+    "donchian_base vs benchmark": {
+      "dSharpe": -0.652719,
+      "CI low": -1.120154,
+      "CI high": -0.214774,
+      "p (dSharpe <= 0)": 0.9985
+    },
+    "kalman_hmm vs kalman_base": {
+      "dSharpe": -0.015488,
+      "CI low": -0.158916,
+      "CI high": 0.131966,
+      "p (dSharpe <= 0)": 0.5955
+    },
+    "kalman_vol vs kalman_base": {
+      "dSharpe": -0.141512,
+      "CI low": -0.327262,
+      "CI high": 0.043351,
+      "p (dSharpe <= 0)": 0.9335
+    },
+    "kalman_lookahead vs kalman_base": {
+      "dSharpe": 0.542736,
+      "CI low": 0.397061,
+      "CI high": 0.699931,
+      "p (dSharpe <= 0)": 0.0
+    },
+    "kalman_hmm vs kalman_vol": {
+      "dSharpe": 0.126024,
+      "CI low": -0.0471,
+      "CI high": 0.288333,
+      "p (dSharpe <= 0)": 0.0745
+    },
+    "kalman_base vs benchmark": {
+      "dSharpe": -0.345214,
+      "CI low": -0.761207,
+      "CI high": 0.068103,
+      "p (dSharpe <= 0)": 0.945
+    }
+  },
+  "runtime_seconds": 21.3
+}

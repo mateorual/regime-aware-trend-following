@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Market data is downloaded on demand and cached locally (not redistributed)
+data/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
